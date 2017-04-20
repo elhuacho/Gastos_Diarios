@@ -1,0 +1,1 @@
+json.partial! "gastos_diarios/gastos_diario", gastos_diario: @gastos_diario

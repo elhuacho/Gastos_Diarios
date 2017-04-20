@@ -1,0 +1,32 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Gastos Diarios</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Descripcion</th>
+      <th>Categoria</th>
+      <th>Monto</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @gastos_diarios.each do |gastos_diario| %>
+      <tr>
+        <td><%= gastos_diario.descripcion %></td>
+        <td><%= gastos_diario.categoria %></td>
+        <td><%= gastos_diario.monto %></td>
+        <td><%= link_to 'Show', gastos_diario %></td>
+        <td><%= link_to 'Edit', edit_gastos_diario_path(gastos_diario) %></td>
+        <td><%= link_to 'Destroy', gastos_diario, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Gastos diario', new_gastos_diario_path %>
+<%= will_paginate @gastos_diarios%>

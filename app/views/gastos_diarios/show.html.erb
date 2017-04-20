@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Descripcion:</strong>
+  <%= @gastos_diario.descripcion %>
+</p>
+
+<p>
+  <strong>Categoria:</strong>
+  <%= @gastos_diario.categoria %>
+</p>
+
+<p>
+  <strong>Monto:</strong>
+  <%= @gastos_diario.monto %>
+</p>
+
+<%= link_to 'Edit', edit_gastos_diario_path(@gastos_diario) %> |
+<%= link_to 'Back', gastos_diarios_path %>
